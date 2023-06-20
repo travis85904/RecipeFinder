@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="711.0" prefWidth="1134.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.recipefinder.RecipeFinderController">
+    <children>
+        <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="690.0" prefWidth="1146.0" VBox.vgrow="ALWAYS">
+            <items>
+                <AnchorPane prefHeight="702.0" prefWidth="304.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Search for Recipes" textAlignment="CENTER" textFill="#282525" wrapText="false">
+                            <font>
+                                <Font name="System Bold" size="18.0" fx:id="x1" />
+                            </font>
+                        </Label>
+                        <ButtonBar layoutX="11.0" layoutY="64.0" prefHeight="40.0" prefWidth="200.0" />
+                        <TextField fx:id="searchQueryTextField" layoutX="14.0" layoutY="104.0" onKeyPressed="#searchQueryTextFieldKeyHandler" prefHeight="25.0" prefWidth="187.0" promptText="Recipe name" />
+                        <Button fx:id="searchButton" layoutX="33.0" layoutY="186.0" mnemonicParsing="false" onAction="#onSearchButtonClick" prefHeight="16.0" prefWidth="78.0" text="Search">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="691.0" prefWidth="854.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="1.0" style="&#10;" text="Results" textAlignment="CENTER" wrapText="false">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Accordion layoutX="12.0" layoutY="35.0" prefHeight="653.0" prefWidth="835.0">
+                            <panes>
+                                <TitledPane fx:id="accordionPane1" animated="false">
+                                    <content>
+                                        <AnchorPane fx:id="accordion1Anchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                                <TextArea fx:id="accordionText1" editable="false" layoutX="-2.0" prefHeight="402.0" prefWidth="835.0" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="accordionPane2" animated="false">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="accordionText2" editable="false" prefHeight="401.0" prefWidth="835.0" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                                        </AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="accordionPane3" animated="false">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="accordionText3" editable="false" prefHeight="401.0" prefWidth="835.0" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children></AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="accordionPane4" animated="false" layoutX="10.0" layoutY="60.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="accordionText4" editable="false" prefHeight="400.0" prefWidth="835.0" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children></AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="accordionPane5" animated="false" layoutX="10.0" layoutY="430.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="accordionText5" editable="false" prefHeight="398.0" prefWidth="835.0" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children></AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="accordionPane6" animated="false" layoutX="10.0" layoutY="10.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="accordionText6" editable="false" prefHeight="401.0" prefWidth="835.0" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children></AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="accordionPane7" animated="false" layoutX="10.0" layoutY="60.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="accordionText7" editable="false" prefHeight="402.0" prefWidth="835.0" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children></AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="accordionPane8" animated="false" layoutX="10.0" layoutY="85.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="accordionText8" editable="false" prefHeight="402.0" prefWidth="835.0" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children></AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="accordionPane9" animated="false" layoutX="10.0" layoutY="110.0" prefHeight="403.0" prefWidth="835.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="accordionText9" editable="false" prefHeight="405.0" prefWidth="835.0" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children></AnchorPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="accordionPane10" animated="false" layoutX="10.0" layoutY="35.0" prefHeight="281.0" prefWidth="646.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="accordionText10" editable="false" prefHeight="403.0" prefWidth="835.0" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children></AnchorPane>
+                                    </content>
+                                </TitledPane>
+                            </panes>
+                        </Accordion>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="11.0" fx:id="x3" />
+                    </font>
+                    <textFill>
+                        <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+                    </textFill>
+                </Label>
+                <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+                <Label font="$x3" maxWidth="-1.0" prefHeight="23.0" prefWidth="66.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>
