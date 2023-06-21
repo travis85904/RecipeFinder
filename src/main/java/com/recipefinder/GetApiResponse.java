@@ -1,7 +1,6 @@
 package com.recipefinder;
 
 import com.google.gson.Gson;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URI;
@@ -13,6 +12,7 @@ import java.util.Properties;
 public class GetApiResponse {
 
     static Recipe[] getJsonArray(String query) throws IOException, InterruptedException {
+
         Properties properties = new Properties();
         FileInputStream fileInputStream = new FileInputStream("private/config.properties");
         properties.load(fileInputStream);

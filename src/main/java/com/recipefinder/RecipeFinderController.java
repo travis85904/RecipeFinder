@@ -39,6 +39,7 @@ public class RecipeFinderController {
         i = 0;
         for (TextArea a : textAreas) {
             a.setText(recipeList[i].toString());
+            i++;
         }
     }
 
