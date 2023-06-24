@@ -20,7 +20,7 @@ public class GetApiResponse {
         //
         //YOU MUST PUT YOUR OWN API KEY HERE OR THE PROGRAM WILL NOT WORK
         //
-        //THE API YOU MUST USE IS "RECIPE BY API-NINJAS
+        //THE API YOU MUST USE IS "RECIPE BY API-NINJAS"
         //AVAILABLE FROM RAPIDAPI
         String apiKey = properties.getProperty("api.key");
 
