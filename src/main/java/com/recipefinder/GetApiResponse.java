@@ -16,6 +16,12 @@ public class GetApiResponse {
         Properties properties = new Properties();
         FileInputStream fileInputStream = new FileInputStream("private/config.properties");
         properties.load(fileInputStream);
+
+        //
+        //YOU MUST PUT YOUR OWN API KEY HERE OR THE PROGRAM WILL NOT WORK
+        //
+        //THE API YOU MUST USE IS "RECIPE BUT API-NINJAS
+        //AVAILABLE FROM RAPIDAPI
         String apiKey = properties.getProperty("api.key");
 
         HttpRequest request = HttpRequest.newBuilder()
