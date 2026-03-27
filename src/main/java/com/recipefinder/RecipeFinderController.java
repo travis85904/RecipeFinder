@@ -5,6 +5,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.input.KeyCode;
+
 import java.io.IOException;
 
 public class RecipeFinderController {
@@ -33,12 +34,16 @@ public class RecipeFinderController {
         recipeList = com.recipefinder.GetApiResponse.getJsonArray(query);
 
         for (TitledPane p : titledPanes) {
-            p.setText(recipeList[i].title());
+            if (i < recipeList.length) {
+                p.setText(recipeList[i].title());
+            }
             i++;
         }
         i = 0;
         for (TextArea a : textAreas) {
-            a.setText(recipeList[i].toString());
+            if (i < recipeList.length) {
+                a.setText(recipeList[i].toString());
+            }
             i++;
         }
     }
